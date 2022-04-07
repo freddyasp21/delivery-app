@@ -1,0 +1,45 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.pasos {
+  margin-top: 5rem;
+
+  &__wave {
+    margin-bottom: -1px;
+  }
+
+  &__contenido {
+    background-color: v.$primario;
+  }
+
+  &__heading {
+    text-align: center;
+    color: v.$blanco;
+
+    &--descripcion {
+      font-size: 1.8rem;
+      display: block;
+    }
+  }
+
+  &__grid {
+    @include m.tablet {
+      @include m.grid(3, v.$separacion);
+    }
+  }
+
+  &__imagen {
+    transition: transform 300ms ease-in-out;
+    -webkit-transition: transform 300ms ease-in-out;
+    -moz-transition: transform 300ms ease-in-out;
+    -ms-transition: transform 300ms ease-in-out;
+    -o-transition: transform 300ms ease-in-out;
+    &:hover {
+      transform: rotate(-4deg) scale(1.2);
+      -webkit-transform: rotate(-4deg) scale(1.2);
+      -moz-transform: rotate(-4deg) scale(1.2);
+      -ms-transform: rotate(-4deg) scale(1.2);
+      -o-transform: rotate(-4deg) scale(1.2);
+    }
+  }
+}

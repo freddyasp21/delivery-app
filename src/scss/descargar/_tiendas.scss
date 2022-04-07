@@ -1,0 +1,41 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.tiendas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__grid {
+    @include m.grid(2, 2rem);
+  }
+
+  &__heading {
+    color: v.$secundario;
+    margin: 2rem 0 0 0;
+  }
+
+  &__heading,
+  &__texto {
+    text-align: center;
+  }
+
+  &__texto {
+    margin-bottom: 3rem;
+  }
+
+  &__enlace {
+    transition: transform 500ms;
+    -webkit-transition: transform 500ms;
+    -moz-transition: transform 500ms;
+    -ms-transition: transform 500ms;
+    -o-transition: transform 500ms;
+    &:hover {
+      transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+  }
+}
